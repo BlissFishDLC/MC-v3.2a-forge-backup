@@ -1,0 +1,240 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 6/20/23, 11:18 PM
+Description: Mod loading error has occurred
+
+java.lang.Exception: Mod Loading has failed
+	at net.minecraftforge.fml.CrashReportExtender.dumpModLoadingCrashReport(CrashReportExtender.java:71) ~[forge:?] {re:classloading}
+	at net.minecraftforge.fml.server.ServerModLoader.load(ServerModLoader.java:37) ~[forge:?] {re:classloading}
+	at net.minecraft.server.Main.main(Main.java:95) ~[?:?] {re:classloading,re:mixin,pl:mixin:A}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?] {}
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:?] {}
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?] {}
+	at java.lang.reflect.Method.invoke(Method.java:566) ~[?:?] {}
+	at net.minecraftforge.fml.loading.FMLServerLaunchProvider.lambda$launchService$0(FMLServerLaunchProvider.java:37) ~[forge-1.16.5-36.2.35.jar:36.2] {}
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:37) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:54) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:72) [modlauncher-8.1.3.jar:?] {}
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:82) [modlauncher-8.1.3.jar:?] {re:classloading}
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:66) [modlauncher-8.1.3.jar:?] {re:classloading}
+	at net.minecraftforge.server.ServerMain$Runner.runLauncher(ServerMain.java:49) [forge-1.16.5-36.2.35.jar:?] {}
+	at net.minecraftforge.server.ServerMain$Runner.access$100(ServerMain.java:46) [forge-1.16.5-36.2.35.jar:?] {}
+	at net.minecraftforge.server.ServerMain.main(ServerMain.java:43) [forge-1.16.5-36.2.35.jar:?] {}
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap.rehash(Object2ObjectOpenHashMap.java:900) ~[?:?] {re:classloading}
+-- MOD forge --
+Details:
+	Mod File: forge-1.16.5-36.2.35-universal.jar
+	Failure message: Forge (forge) encountered an error during the common_setup event phase
+		java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1025
+	Mod Version: 36.2.35
+	Mod Issue URL: http://www.minecraftforge.net/
+	Exception message: java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 1025
+Stacktrace:
+	at it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap.rehash(Object2ObjectOpenHashMap.java:900) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap.insert(Object2ObjectOpenHashMap.java:273) ~[?:?] {re:classloading}
+	at it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap.put(Object2ObjectOpenHashMap.java:281) ~[?:?] {re:classloading}
+	at net.minecraft.block.DispenserBlock.func_199774_a(SourceFile:48) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler.lambda$onCommonSetup$0(ForgeSpawnEggItem.java:101) ~[forge:?] {re:classloading,pl:eventbus:A}
+	at java.util.ArrayList.forEach(ArrayList.java:1541) ~[?:?] {}
+	at net.minecraftforge.common.ForgeSpawnEggItem$CommonHandler.onCommonSetup(ForgeSpawnEggItem.java:96) ~[forge:?] {re:classloading,pl:eventbus:A}
+	at net.minecraftforge.eventbus.ASMEventHandler_1091_CommonHandler_onCommonSetup_FMLCommonSetupEvent.invoke(.dynamic) ~[?:?] {}
+	at net.minecraftforge.eventbus.ASMEventHandler.invoke(ASMEventHandler.java:85) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:302) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.eventbus.EventBus.post(EventBus.java:283) ~[eventbus-4.0.0.jar:?] {}
+	at net.minecraftforge.fml.javafmlmod.FMLModContainer.acceptEvent(FMLModContainer.java:106) ~[forge:36.2] {re:classloading}
+	at net.minecraftforge.fml.ModContainer.lambda$buildTransitionHandler$4(ModContainer.java:107) ~[forge:?] {re:classloading}
+	at java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736) ~[?:?] {}
+	at java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728) ~[?:?] {}
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020) ~[?:?] {}
+	at java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656) ~[?:?] {re:computing_frames}
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594) ~[?:?] {re:computing_frames}
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 11.0.12, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 7294785144 bytes (6956 MB) / 8589934592 bytes (8192 MB) up to 8589934592 bytes (8192 MB)
+	CPUs: 16
+	JVM Flags: 14 total; -Xmx8G -Xms8G -Xss4M -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:+AlwaysPreTouch -XX:+UseStringDeduplication -XX:-OmitStackTraceInFastThrow -XX:+OptimizeStringConcat -XX:+UseAdaptiveGCBoundary -XX:G1HeapRegionSize=32M
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.35.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.35
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		[天空村庄]SkyVillage_1.0.0_1.16.5.jar                 |Sky Villages                  |skyvillages                   |1.0.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[地下城]DungeonsMod-1.16.3-1.4.43.jar                |Dungeons Mod                  |dungeonsmod                   |1.16.3-1.4.43       |SIDED_SETU|Manifest: NOSIGNATURE
+		[蔚蓝天空] blue_skies-1.16.5-1.1.3.jar                |Blue Skies                    |blue_skies                    |1.1.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		[星辉魔法] astralsorcery-1.16.5-1.14.1.jar            |Astral Sorcery                |astralsorcery                 |1.16.4-1.14.1       |SIDED_SETU|Manifest: 45:2b:0a:49:6b:65:3b:39:a9:dd:d2:5b:55:7f:82:47:a5:1d:7a:cc:7f:a8:69:73:72:53:6f:57:4d:b2:1a:b7
+		[猛龙之居] Wyrmroost-1.16.3-1.2.11.jar                |Wyrmroost                     |wyrmroost                     |1.16.3-1.2.11       |SIDED_SETU|Manifest: NOSIGNATURE
+		[菲利普的遗迹]Philips ruins 1.16.5-2.8.jar              |Philips ruins1.16.5           |philips_ruins1_16_5           |2.8                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[公开GUI显示]PGA-1.16.4-1.1.2.1.jar                   |Public GUI Announcement       |publicguiannouncement         |1.1.0.1             |SIDED_SETU|Manifest: NOSIGNATURE
+		[碰撞体积优化]entitycollisionfpsfix-1.16-1.0.1.jar      |Entity Collision FPS Fix      |entitycollisionfpsfix         |1.0.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[Xaero的世界地图] XaerosWorldMap_1.26.0_Forge_1.16.5.ja|Xaero's World Map             |xaeroworldmap                 |1.26.0              |SIDED_SETU|Manifest: NOSIGNATURE
+		[凋零骷髅调整前置]Placebo-1.16.5-4.7.0.jar                |Placebo                       |placebo                       |4.7.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[冰与火之歌前置]citadel-1.8.1-1.16.5.jar                 |Citadel                       |citadel                       |1.8.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[Alex的生物] alexsmobs-1.12.1.jar                    |Alex's Mobs                   |alexsmobs                     |1.12.1              |SIDED_SETU|Manifest: NOSIGNATURE
+		[传说工具条提示前置]Prism-1.16.5-1.0.1.jar                 |Prism                         |prism                         |1.0.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[农夫乐事拓展]farmersdelightintegrations-1.16.5-1.2.jar |Farmer's Delight Compats      |farmersdelightintegrations    |1.16.5-1.2          |SIDED_SETU|Manifest: NOSIGNATURE
+		[头衔前置]YungsApi-1.16.4-Forge-13.jar                |YUNG's API                    |yungsapi                      |1.16.4-Forge-13     |SIDED_SETU|Manifest: NOSIGNATURE
+		[突变生物重置版] MutantBeasts-1.16.4-1.1.3.jar           |Mutant Beasts                 |mutantbeasts                  |1.16.4-1.1.3        |SIDED_SETU|Manifest: d9:be:bd:b6:9a:e4:14:aa:05:67:fb:84:06:77:a0:c5:10:ec:27:15:1b:d6:c0:88:49:9a:ef:26:77:61:0b:5e
+		[凋灵骷髅调整] WitherSkeletonTweaks-1.16.5-5.4.1.jar    |Wither Skeleton Tweaks        |wstweaks                      |5.4.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[警卫村民]guardvillagers-1.16.5.1.2.6.jar             |Guard Villagers               |guardvillagers                |1.2.6               |SIDED_SETU|Manifest: NOSIGNATURE
+		[精妙背包] sophisticatedbackpacks-1.16.5-3.15.13.560.j|Sophisticated Backpacks       |sophisticatedbackpacks        |1.16.5-3.15.13.560  |SIDED_SETU|Manifest: NOSIGNATURE
+		[沉浸式盔甲]immersive-armors-1.1.6-forge.jar           |Immersive Armors              |immersive_armors              |1.1.6               |SIDED_SETU|Manifest: NOSIGNATURE
+		[搬运] carryon-1.16.5-1.15.5.22.jar                 |Carry On                      |carryon                       |1.15.5.22           |SIDED_SETU|Manifest: NOSIGNATURE
+		[滑翔伞] Paraglider-1.16.5-1.3.2.11.jar              |Paraglider                    |paraglider                    |1.3.2.11            |SIDED_SETU|Manifest: NOSIGNATURE
+		[末影龙难度调整]dragonfight-1.8.jar                      |dragonfight mod               |dragonfight                   |1.8                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[存储扩展前置]ninjaphenix-container-library-1.2.10+1.16.|NinjaPhenix's Container Librar|ninjaphenix_container_lib     |1.2.10              |SIDED_SETU|Manifest: NOSIGNATURE
+		[试验假人]MmmMmmMmmMmm-1.16.5-1.3.1.jar               |MmmMmmMmmMmm                  |dummmmmmy                     |1.3.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[暮色森林]twilightforest-1.16.5-4.0.490-universal.jar |The Twilight Forest           |twilightforest                |NONE                |SIDED_SETU|Manifest: NOSIGNATURE
+		[巴迪卡牌]Buddycards-1.16.5-2.5.3.jar                 |Buddycards                    |buddycards                    |1.16.5-2.5.3        |SIDED_SETU|Manifest: NOSIGNATURE
+		[更好的末地Forge重铸版] betterendforge-1.16.5-2.5.jar     |BetterEnd Forge               |betterendforge                |1.16.5-2.5          |SIDED_SETU|Manifest: NOSIGNATURE
+		[进度牌匾]AdvancementPlaques-1.16.5-1.4.1.jar         |Advancement Plaques           |advancementplaques            |1.4.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[前置]structure_gel-1.16.5-1.7.8.jar                |Structure Gel API             |structure_gel                 |1.7.8               |SIDED_SETU|Manifest: NOSIGNATURE
+		[昂贵突破]anviltweaks-3.1.jar                         |Anvil Tweaks                  |anviltweaks                   |3.1                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[农夫乐事]FarmersDelight-1.16.5-0.6.0.jar             |Farmer's Delight              |farmersdelight                |1.16.5-0.6.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		[火炬大师] torchmaster-2.3.8.jar                      |Torchmaster                   |torchmaster                   |2.3.8               |SIDED_SETU|Manifest: NOSIGNATURE
+		[结构变体] repurposed_structures_forge-3.4.7+1.16.5.ja|Repurposed Structures         |repurposed_structures         |3.4.7+1.16.5        |SIDED_SETU|Manifest: NOSIGNATURE
+		[末地 创世]endrem-5.0.2-R-1.16.5.jar                  |End Remastered                |endrem                        |5.0.2-R-1.16.5      |SIDED_SETU|Manifest: NOSIGNATURE
+		[更多熔炉]ironfurnaces-1.16.5-2.7.7.jar               |Iron Furnaces                 |ironfurnaces                  |2.7.7               |SIDED_SETU|Manifest: NOSIGNATURE
+		[火花] spark-1.9.1-forge.jar                        |spark                         |spark                         |1.9.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[饰品栏]curios-forge-1.16.5-4.0.8.2.jar              |Curios API                    |curios                        |1.16.5-4.0.8.2      |SIDED_SETU|Manifest: NOSIGNATURE
+		[遗物]relics-1.16.5-0.3.4.4.jar                     |Relics                        |relics                        |0.3.4.4             |SIDED_SETU|Manifest: NOSIGNATURE
+		[灾变] L_Enders Cataclysm-0.48-1.16.5.jar           |Cataclysm Mod                 |cataclysm                     |1.0                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[国创][车万女仆]touhoulittlemaid-1.16.5-1.0.2.jar       |Touhou Little Maid            |touhou_little_maid            |NONE                |SIDED_SETU|Manifest: NOSIGNATURE
+		[帕秋莉手册]Patchouli-1.16.4-53.2.jar                  |Patchouli                     |patchouli                     |1.16.4-53.2         |SIDED_SETU|Manifest: NOSIGNATURE
+		[道具BAN]itemblacklist-1.16.5-1.4.2.jar             |Item Blacklist                |itemblacklist                 |1.16.5-1.4.2        |SIDED_SETU|Manifest: NOSIGNATURE
+		[货币多多]Never-Enough-Currency-1.16.5-1.0.5.jar      |Never Enough Currency         |currency                      |1.16.5-1.0.5        |SIDED_SETU|Manifest: NOSIGNATURE
+		[新生魔艺附属]arsomega-1.5.jar                          |Ars Omega                     |arsomega                      |1.16.5-1.5          |SIDED_SETU|Manifest: NOSIGNATURE
+		[初始套件前置]collective-1.16.5-4.25.jar                |Collective                    |collective                    |4.25                |SIDED_SETU|Manifest: NOSIGNATURE
+		[白门的奇异附魔：苦痛长河]lowingagony-1.16.5-1.0.6.jar        |MarbleGate's Exotic Enchantmen|flowingagony                  |1.16.5-1.0.6        |SIDED_SETU|Manifest: NOSIGNATURE
+		[独特的附魔]Unique Enchantments-1.16.5-2.3.0.jar       |Unique Enchantments           |uniquee                       |2.3.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[矿石挖掘] OreExcavation-1.8.157.jar                  |Ore Excavation                |oreexcavation                 |1.8.157             |SIDED_SETU|Manifest: e7:68:1c:0d:b9:7e:cf:f8:f3:40:9c:84:c5:39:d7:a4:59:78:b0:6b:c3:fd:b7:4f:69:18:a3:88:e3:76:8c:3f
+		[无限+经验修补] InfinityMending-1.16.3-0.1.0.jar        |InfinityMending               |infinitymending               |0.1.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[神秘遗物] EnigmaticLegacy-2.11.11.jar                |Enigmatic Legacy              |enigmaticlegacy               |2.11.11             |SIDED_SETU|Manifest: NOSIGNATURE
+		[扩展存储] expandedstorage-7.3.8+1.16.5.jar           |Expanded Storage              |expandedstorage               |7.3.8               |SIDED_SETU|Manifest: NOSIGNATURE
+		worldedit-mod-7.2.5-dist.jar                      |WorldEdit                     |worldedit                     |7.2.5+57d5ac9       |SIDED_SETU|Manifest: NOSIGNATURE
+		[深渊：第二章] TheAbyss2 2.2.3-4 1.16.5.jar             |TheAbyss                      |theabyss                      |2.2.3-4             |SIDED_SETU|Manifest: NOSIGNATURE
+		[初始套件]starterkit_1.16.5-3.1.jar                   |Starter Kit                   |starterkit                    |3.1                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[斯巴达的武器] SpartanWeaponry-1.16.5-2.2.0-rc-2.jar    |Spartan Weaponry              |spartanweaponry               |2.2.0 Release Candid|SIDED_SETU|Manifest: NOSIGNATURE
+		[国创][暮色乐事]TwilightDelight-1.16.5-1.1.3.jar        |Twilight Delight              |twilightdelight               |1.1.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		[更多突变生物] mutantmore-1.16.5-1.0.1.jar              |Mutant More                   |mutantmore                    |1.0.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		[FTB前置]architectury-1.32.66.jar                   |Architectury                  |architectury                  |1.32.66             |SIDED_SETU|Manifest: NOSIGNATURE
+		[AI改进] AI-Improvements-1.16.5-0.4.0.jar           |AI-Improvements               |aiimprovements                |0.4.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[星辉魔法前置]observerlib-1.16.5-1.5.3.jar              |ObserverLib                   |observerlib                   |1.16.5-1.5.3        |SIDED_SETU|Manifest: NOSIGNATURE
+		[刷怪笼控制]AgeingSpawners-1.16.5-1.1.0.jar            |Ageing Spawners               |ageingspawners                |1.1.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[深暗之园] The_Undergarden-1.16.5-0.5.5.jar           |The Undergarden               |undergarden                   |0.5.5               |SIDED_SETU|Manifest: NOSIGNATURE
+		[附魔师]enchantwithmob-1.16.5-1.5.2.jar              |Enchant With Mob              |enchantwithmob                |1.16.5-1.5.2        |SIDED_SETU|Manifest: NOSIGNATURE
+		[汤姆的简易存储]toms_storage-1.2.19.jar                  |Tom's Simple Storage Mod      |toms_storage                  |1.2.19              |SIDED_SETU|Manifest: NOSIGNATURE
+		[区块载入器前置]CodeChickenLib-1.16.5-4.0.7.445-universal|CodeChicken Lib               |codechickenlib                |4.0.7.445           |SIDED_SETU|Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		[配置调整前置]BetterModsButton-v1.0.5-1.16.5-Forge.jar  |Better Mods Button            |bettermodsbutton              |1.0.5               |SIDED_SETU|Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[虚空图腾]voidtotem-1.16.5-1.4.0.jar                  |Void Totem                    |voidtotem                     |1.16.5-1.4.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		[独特的附魔前置]Unique Enchantments Base-1.16.5-1.4.0.jar|Unique Enchantments Base      |uniquebase                    |1.4.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[悚怖钢] dreadsteel-1.16.5-1.1.4.1.jar               |Dreadsteel                    |dreadsteel                    |1.16.5-1.1.4.1      |SIDED_SETU|Manifest: NOSIGNATURE
+		[魔改前置]rhino-forge-1605.1.5-build.75.jar           |Rhino                         |rhino                         |1605.1.5-build.75   |SIDED_SETU|Manifest: NOSIGNATURE
+		[虚拟生物]mowziesmobs-1.5.25.jar                      |Mowzie's Mobs                 |mowziesmobs                   |1.5.25              |SIDED_SETU|Manifest: NOSIGNATURE
+		[前置]geckolib-forge-1.16.5-3.0.66.jar              |GeckoLib                      |geckolib3                     |3.0.66              |SIDED_SETU|Manifest: NOSIGNATURE
+		[吃不停] AlwaysEat-4.0.jar                           |AlwaysEat                     |salwayseat                    |4.0                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[连锁破坏前置]ftb-library-forge-1605.3.4-build.90.jar   |FTB Library                   |ftblibrary                    |1605.3.4-build.90   |SIDED_SETU|Manifest: NOSIGNATURE
+		[FTBQ]团队ftb-teams-forge-1605.2.3-build.40.jar     |FTB Teams                     |ftbteams                      |1605.2.3-build.40   |SIDED_SETU|Manifest: NOSIGNATURE
+		[配置调整]ConfigMenusForge-v1.2.0-1.16.5-Forge.jar    |Config Menus for Forge        |configmenusforge              |1.2.0               |SIDED_SETU|Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[丰富的饰品] bountifulbaubles-1.16.5-0.1.0-forge.jar   |Bountiful Baubles             |bountifulbaubles              |1.16.5-0.1.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		[JEI物品管理器] jei-1.16.5-7.7.1.153.jar               |Just Enough Items             |jei                           |7.7.1.153           |SIDED_SETU|Manifest: NOSIGNATURE
+		[魔改]kubejs-forge-1605.3.19-build.299.jar          |KubeJS                        |kubejs                        |1605.3.19-build.299 |SIDED_SETU|Manifest: NOSIGNATURE
+		[JEI附魔信息] JEIEnchantmentInfo-1.16.4-1.2.1.jar     |JEI Enchantment Info          |jeienchantmentinfo            |1.16.4-1.2.1        |SIDED_SETU|Manifest: NOSIGNATURE
+		[FTBQ]前置item-filters-forge-1605.2.5-build.7.jar   |Item Filters                  |itemfilters                   |1605.2.5-build.7    |SIDED_SETU|Manifest: NOSIGNATURE
+		[工作台优化]VisualWorkbench-v1.1.0-1.16.5.jar          |Visual Workbench              |visualworkbench               |1.1.0               |SIDED_SETU|Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[属性修复] AttributeFix-1.16.5-10.1.4.jar             |AttributeFix                  |attributefix                  |10.1.4              |SIDED_SETU|Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		[魔术师] the-conjurer-1.16.4-1.0.13.jar              |The Conjurer                  |conjurer_illager              |1.0.13              |SIDED_SETU|Manifest: NOSIGNATURE
+		[下界乐事前置]abnormals_core-1.16.5-3.3.1.jar           |Abnormals Core                |abnormals_core                |3.3.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[哥布林商人] goblintraders-1.6.0-1.16.3.jar            |Goblin Traders                |goblintraders                 |1.6.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[可怕的地牢前置]LibraryFerret-Forge-1.16.5-1.0.3.jar     |Library ferret                |libraryferret                 |1.0.3               |SIDED_SETU|Manifest: NOSIGNATURE
+		[提升戒指]RingsOfAscension-1.16.4-1.6.0.jar           |Rings of Ascension            |ringsofascension              |1.6.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[传送石碑]Waystones_1.16.5-7.6.4.jar                  |Waystones                     |waystones                     |7.6.4               |SIDED_SETU|Manifest: NOSIGNATURE
+		[经验机制改革] Clumps-6.0.0.28.jar                      |Clumps                        |clumps                        |6.0.0.28            |SIDED_SETU|Manifest: NOSIGNATURE
+		[可怕的地牢]AwesomeDungeonForge-1.16.5-2.0.8.jar       |Awesome Dungeon               |awesomedungeon                |2.0.8               |SIDED_SETU|Manifest: NOSIGNATURE
+		[自然罗盘／生物群系指南针] NaturesCompass-1.16.5-2.0.1-fabric.|Nature's Compass              |naturescompass                |1.16.5-1.9.1-forge  |SIDED_SETU|Manifest: NOSIGNATURE
+		[冠军／强敌] champions-forge-1.16.5-2.0.1.12.jar       |Champions                     |champions                     |1.16.5-2.0.1.12     |SIDED_SETU|Manifest: NOSIGNATURE
+		[烹饪锅]CrockPot-1.16.5-2.1.0-release.jar            |Crock Pot                     |crockpot                      |2.1.0-release       |SIDED_SETU|Manifest: NOSIGNATURE
+		[探险者指南针] ExplorersCompass-1.16.5-1.1.2-forge.jar  |Explorer's Compass            |explorerscompass              |1.16.5-1.1.2-forge  |SIDED_SETU|Manifest: NOSIGNATURE
+		[冰与火之歌]iceandfire-2.1.11-1.16.5.jar               |Ice and Fire                  |iceandfire                    |2.1.11-1.16.5       |SIDED_SETU|Manifest: NOSIGNATURE
+		[寻龙之眼].jar                                        |Eye of Dragons                |eyeofdragons                  |NONE                |SIDED_SETU|Manifest: NOSIGNATURE
+		[任务拓展]questsadditions-1.16-1.4.0.jar              |Quests Additions              |questsadditions               |1.4.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[遍历]traverse-1.16.4-0.4.3.8.jar                   |Traverse: Reforged            |traverse                      |1.16.4-0.4.3.8      |SIDED_SETU|Manifest: NOSIGNATURE
+		[新生魔艺] ars_nouveau-1.16.5-1.25.1.jar              |Ars Nouveau                   |ars_nouveau                   |1.25.1              |SIDED_SETU|Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.35-universal.jar                |Forge                         |forge                         |36.2.35             |ERROR     |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		[阿图姆：沙漠之旅／亚图姆：金沙之旅] Atum-1.16.5-2.2.11.jar        |Atum 2                        |atum                          |1.16.5-2.2.11       |SIDED_SETU|Manifest: NOSIGNATURE
+		[多元乐事]culturaldelights-1.16.5-0.9.2.jar           |Cultural Delights             |culturaldelights              |0.9.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		[农夫的拓展食物] Farmers_Extra_Foods_1.2.jar             |Farmer's Extra Foods          |farmers_extra_foods           |1.0.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[旅行者的头衔]TravelersTitles-1.16.4-1.5.jar            |Traveler's Titles             |travelerstitles               |1.16.4-1.5          |SIDED_SETU|Manifest: NOSIGNATURE
+		[斯巴达的武器：暮色森林] spartantwilight-1.16.5-2.2.1.jar    |Spartan Weaponry: Twilight For|spartantwilight               |1.16.5-2.2.1        |SIDED_SETU|Manifest: NOSIGNATURE
+		[副手战斗] OffHandCombat-1.16.3-3.2.1.3.jar           |Off Hand Combat               |offhandcombat                 |1.16.3-3.2.1.3      |SIDED_SETU|Manifest: c9:84:cd:eb:27:ac:0d:ad:8c:55:6f:d6:5f:19:f2:c8:63:2a:b0:bd:3b:d0:b6:df:fd:9f:de:9f:9d:e8:7c:68
+		[Fish的不死族崛起]Fish's Undead Rising-2.1.0.jar        |Fish's Undead Rising          |mod_lavacow                   |2.1.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[沉浸式音效]ImmersiveFX+1.0.2+1.16.5.jar               |§3ImmersiveFX                 |dsurround                     |4.0.5.0             |SIDED_SETU|Manifest: NOSIGNATURE
+		[原版扩充前置]selene-1.16.5-1.9.0.jar                   |Selene                        |selene                        |1.16.5-1.0          |SIDED_SETU|Manifest: NOSIGNATURE
+		[地牢浮现之时]DungeonsArise-1.16.5-2.1.49-beta.jar      |When Dungeons Arise           |dungeons_arise                |2.1.49              |SIDED_SETU|Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.35-server.jar                   |Minecraft                     |minecraft                     |1.16.5              |SIDED_SETU|Manifest: NOSIGNATURE
+		[右键收取农作物]right_click_get_crops-1.16.5-1.1.0.2.jar |Right Click, Get Crops        |right_click_get_crops         |1.1.0.2             |SIDED_SETU|Manifest: 75:0b:cc:9b:64:2e:9b:c4:41:d1:95:00:71:ee:87:1a:b3:5e:4b:da:8e:e8:39:00:fd:5d:e5:9c:40:42:33:09
+		[罪恶之子]sons-of-sins-1.16.5-1.0.9.jar               |sons of sins                  |sons_of_sins                  |1.0.9               |SIDED_SETU|Manifest: NOSIGNATURE
+		[战斗高塔]BrassAmberBattleTowers-1.16.5-1.6.3.jar     |Brass Amber BattleTowers      |ba_bt                         |1.16.5-1.6.3        |SIDED_SETU|Manifest: NOSIGNATURE
+		[治疗调整]roughtweaks-1.16.5-2.5.0.jar                |Rough Tweaks                  |roughtweaks                   |2.5.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[工具皮带] ToolBelt-1.16.5-1.16.3.jar                 |Tool Belt                     |toolbelt                      |1.16.3              |SIDED_SETU|Manifest: NOSIGNATURE
+		[FTBQ]FTB任务ftb-quests-forge-1605.3.6-build.76.jar |FTB Quests                    |ftbquests                     |1605.3.6-build.76   |SIDED_SETU|Manifest: NOSIGNATURE
+		[任务牌匾] QuestPlaques-1.16.5-1.0.2.jar              |Quest Plaques                 |questplaques                  |1.0.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		[玉 ] Jade-1.16.4-2.8.1.jar                        |Jade                          |jade                          |2.8.1               |SIDED_SETU|Manifest: NOSIGNATURE
+		[越肩视角重制] ShoulderSurfing-1.16.5-2.2.2.jar         |Shoulder Surfing              |shouldersurfing               |1.16.5-2.2.2        |SIDED_SETU|Manifest: NOSIGNATURE
+		[重铸] modifiers-0.1.2-forge.jar                    |Modifiers                     |modifiers                     |0.1.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		[国创][旷野之塔：重置] towers_of_the_wild-1.16.3-2.1.0.1.ja|Towers Of The Wild            |towers_of_the_wild            |1.16.3-2.1.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		[区块载入器] ChickenChunks-1.16.5-2.9.1.89-universal.ja|ChickenChunks                 |chickenchunks                 |2.9.1.89            |SIDED_SETU|Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		[任务牌匾前置] Iceberg-1.16.5-1.0.45.jar                |Iceberg                       |iceberg                       |1.0.45              |SIDED_SETU|Manifest: NOSIGNATURE
+		[传说工具提示]LegendaryTooltips-1.16.5-1.1.7.jar        |Legendary Tooltips            |legendarytooltips             |1.1.7               |SIDED_SETU|Manifest: NOSIGNATURE
+		[Xaero的小地图] Xaeros_Minimap_22.12.0_Forge_1.16.5.ja|Xaero's Minimap               |xaerominimap                  |22.12.0             |SIDED_SETU|Manifest: NOSIGNATURE
+		[FTB备份]ftb-backups-2.1.2.2.jar                    |FTB Backups                   |ftbbackups                    |2.1.2.2             |SIDED_SETU|Manifest: NOSIGNATURE
+		[寻龙杖]dragonseeker-1.1.jar                         |Dragonseeker                  |dragonseeker                  |1.1                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[多态合成]polymorph-forge-1.16.5-0.40.jar             |Polymorph                     |polymorph                     |1.16.5-0.40         |SIDED_SETU|Manifest: NOSIGNATURE
+		[储物抽屉] StorageDrawers-1.16.3-8.5.2.jar            |Storage Drawers               |storagedrawers                |8.5.2               |SIDED_SETU|Manifest: NOSIGNATURE
+		[简单的茶] simplytea-1.16.5-2.4.0.jar                 |Simply Tea                    |simplytea                     |2.4.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[殖民地前置] structurize-1.16.5-1.0.392-RELEASE.jar    |Structurize                   |structurize                   |1.16.5-1.0.392-RELEA|SIDED_SETU|Manifest: NOSIGNATURE
+		[斯巴达冰与火]SW+Ice+and+Fire-1.16.5-1.1.0.jar          |Spartan Weaponry: Ice and Fire|swiaf                         |1.16.5-1.1.0        |SIDED_SETU|Manifest: NOSIGNATURE
+		[模拟殖民地] minecolonies-1.16.5-1.0.890-RELEASE.jar   |MineColonies                  |minecolonies                  |1.16.5-1.0.890-RELEA|SIDED_SETU|Manifest: NOSIGNATURE
+		[下界乐事] nethers_delight-2.1.jar                    |Nethers Delight               |nethers_delight               |2.1                 |SIDED_SETU|Manifest: NOSIGNATURE
+		[生活调味料：胡萝卜版] SoL-Carrot-1.16.5-1.10.1.jar         |Spice of Life: Carrot Edition |solcarrot                     |1.16.5-1.10.1       |SIDED_SETU|Manifest: NOSIGNATURE
+		[月亮事件]enhancedcelestials-2.0.9-1.16.5.jar         |Enhanced Celestials           |enhancedcelestials            |2.0.9-1.16.5        |SIDED_SETU|Manifest: NOSIGNATURE
+		[工作台优化前置]PuzzlesLib-v1.0.15-1.16.5-Forge.jar      |Puzzles Lib                   |puzzleslib                    |1.0.15              |SIDED_SETU|Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[水产养殖2] Aquaculture-1.16.5-2.1.22.jar             |Aquaculture 2                 |aquaculture                   |1.16.5-2.1.22       |SIDED_SETU|Manifest: NOSIGNATURE
+		[农夫的茶] farmerstea-1.16.5-1.3.jar                  |Farmer's Tea - A Compat Mod   |farmerstea                    |1.16.5-1.3          |SIDED_SETU|Manifest: NOSIGNATURE
+		[更强更远]HarderFarther-1.16.5-1.36.0.6.jar           |Harder Farther Mod            |harderfarther                 |1.36.0.6            |SIDED_SETU|Manifest: NOSIGNATURE
+		[时装盔甲重制版]CosmeticArmorReworked-1.16.5-v5.jar      |CosmeticArmorReworked         |cosmeticarmorreworked         |1.16.5-v5           |SIDED_SETU|Manifest: 5e:ed:25:99:e4:44:14:c0:dd:89:c1:a9:4c:10:b5:0d:e4:b1:52:50:45:82:13:d8:d0:32:89:67:56:57:01:53
+		[清除掉落物]item kill-1.16.5-1.0.0.jar                 |itme kill                     |itme_kill                     |1.0.0               |SIDED_SETU|Manifest: NOSIGNATURE
+		[国创][喝啤酒啦] drinkbeer-1.16.5-2.3.5.jar             |Drink Beer                    |drinkbeer                     |2.3.5               |SIDED_SETU|Manifest: NOSIGNATURE
+		[经验书]xptome-1.16.5-v2.1.5.jar                     |XP Tome                       |xpbook                        |v2.1.5              |SIDED_SETU|Manifest: NOSIGNATURE
+	Crash Report UUID: f145e885-e94b-49e6-b7c5-ad2000f815c2

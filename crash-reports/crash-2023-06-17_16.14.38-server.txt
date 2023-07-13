@@ -1,0 +1,317 @@
+---- Minecraft Crash Report ----
+// I bet Cylons wouldn't have this problem.
+
+Time: 6/17/23, 4:14 PM
+Description: Ticking entity
+
+java.lang.NoClassDefFoundError: com/github/alexthe666/iceandfire/api/FoodUtils
+	at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_241847_a(EntityDragonBase.java:1057) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.entity.LivingEntity.func_70645_a(LivingEntity.java:1199) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70097_a(LivingEntity.java:1059) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.monster.MonsterEntity.func_70097_a(SourceFile:73) ~[?:?] {re:mixin,re:classloading}
+	at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.lambda$destroyAreaFire$2(IafDragonDestructionManager.java:84) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655) ~[?:?] {}
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[?:?] {}
+	at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.destroyAreaFire(IafDragonDestructionManager.java:82) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.stimulateFire(EntityFireDragon.java:394) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.shootFireAtMob(EntityFireDragon.java:303) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.func_70636_d(EntityFireDragon.java:176) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2160) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_70071_h_(EntityDragonBase.java:1688) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:mixin:APP:kubejs-common.mixins.json:LevelMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinWorld,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+Caused by: java.lang.ClassNotFoundException: com.github.alexthe666.iceandfire.api.FoodUtils
+	at java.lang.ClassLoader.findClass(ClassLoader.java:718) ~[?:?] {}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:588) ~[?:?] {}
+	at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:106) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?] {}
+	... 23 more
+	Suppressed: java.lang.ClassNotFoundException: Failed to find class bytes for com.github.alexthe666.iceandfire.api.FoodUtils
+		at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:260) ~[modlauncher-8.1.3.jar:?] {}
+		at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:136) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+		at cpw.mods.modlauncher.TransformingClassLoader.loadClass(TransformingClassLoader.java:98) ~[modlauncher-8.1.3.jar:?] {re:classloading}
+		at java.lang.ClassLoader.loadClass(ClassLoader.java:521) ~[?:?] {}
+		at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_241847_a(EntityDragonBase.java:1057) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at net.minecraft.entity.LivingEntity.func_70645_a(LivingEntity.java:1199) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.entity.LivingEntity.func_70097_a(LivingEntity.java:1059) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.entity.monster.MonsterEntity.func_70097_a(SourceFile:73) ~[?:?] {re:mixin,re:classloading}
+		at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.lambda$destroyAreaFire$2(IafDragonDestructionManager.java:84) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655) ~[?:?] {}
+		at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[?:?] {}
+		at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.destroyAreaFire(IafDragonDestructionManager.java:82) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at com.github.alexthe666.iceandfire.entity.EntityFireDragon.stimulateFire(EntityFireDragon.java:394) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at com.github.alexthe666.iceandfire.entity.EntityFireDragon.shootFireAtMob(EntityFireDragon.java:303) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at com.github.alexthe666.iceandfire.entity.EntityFireDragon.func_70636_d(EntityFireDragon.java:176) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2160) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+		at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_70071_h_(EntityDragonBase.java:1688) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+		at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:mixin:APP:kubejs-common.mixins.json:LevelMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinWorld,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+		at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+		at java.lang.Thread.run(Thread.java:834) [?:?] {}
+	Caused by: java.nio.channels.ClosedChannelException
+		at sun.nio.ch.FileChannelImpl.ensureOpen(FileChannelImpl.java:150) ~[?:?] {}
+		at sun.nio.ch.FileChannelImpl.position(FileChannelImpl.java:349) ~[?:?] {}
+		at sun.nio.ch.FileChannelImpl.position(FileChannelImpl.java:52) ~[?:?] {}
+		at jdk.nio.zipfs.ZipFileSystem.readFullyAt(ZipFileSystem.java:962) ~[jdk.zipfs:?] {}
+		at jdk.nio.zipfs.ZipFileSystem.readFullyAt(ZipFileSystem.java:955) ~[jdk.zipfs:?] {}
+		at jdk.nio.zipfs.ZipFileSystem$EntryInputStream.initDataPos(ZipFileSystem.java:1626) ~[jdk.zipfs:?] {}
+		at jdk.nio.zipfs.ZipFileSystem$EntryInputStream.read(ZipFileSystem.java:1560) ~[jdk.zipfs:?] {}
+		at jdk.nio.zipfs.ZipFileSystem$5.fill(ZipFileSystem.java:1505) ~[jdk.zipfs:?] {}
+		at java.util.zip.InflaterInputStream.read(InflaterInputStream.java:159) ~[?:?] {}
+		at cpw.mods.modlauncher.TransformingClassLoader$DelegatedClassLoader.findClass(TransformingClassLoader.java:252) ~[modlauncher-8.1.3.jar:?] {}
+		... 26 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Stacktrace:
+	at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_241847_a(EntityDragonBase.java:1057) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.entity.LivingEntity.func_70645_a(LivingEntity.java:1199) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.LivingEntity.func_70097_a(LivingEntity.java:1059) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.monster.MonsterEntity.func_70097_a(SourceFile:73) ~[?:?] {re:mixin,re:classloading}
+	at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.lambda$destroyAreaFire$2(IafDragonDestructionManager.java:84) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655) ~[?:?] {}
+	at java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[?:?] {}
+	at com.github.alexthe666.iceandfire.entity.IafDragonDestructionManager.destroyAreaFire(IafDragonDestructionManager.java:82) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.stimulateFire(EntityFireDragon.java:394) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.shootFireAtMob(EntityFireDragon.java:303) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at com.github.alexthe666.iceandfire.entity.EntityFireDragon.func_70636_d(EntityFireDragon.java:176) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.entity.LivingEntity.func_70071_h_(LivingEntity.java:2160) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:placebo:placeboshieldblock,pl:mixin:APP:blue_skies.mixins.json:LivingEntityMixin,pl:mixin:APP:entitycollisionfpsfix.mixins.json:MixinLivingEntity,pl:mixin:APP:citadel.mixins.json:LivingEntityMixin,pl:mixin:APP:immersive_armors.mixin.json:MixinLivingEntity,pl:mixin:APP:relics.mixins.json:MixinLivingEntity,pl:mixin:APP:spartanweaponry.mixins.json:LivingEntityMixin,pl:mixin:APP:bountifulbaubles.mixins.json:MixinLivingEntity,pl:mixin:APP:kubejs-common.mixins.json:LivingEntityMixin,pl:mixin:APP:crockpot.mixins.json:LivingEntityMixin,pl:mixin:APP:ars_nouveau.mixins.json:ExpInvokerMixin,pl:mixin:APP:ars_nouveau.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/offhandcombat/offhandcombat.mixins.json:SwingEntityMixin,pl:mixin:APP:modifiers.mixins.json:MixinLivingEntity,pl:mixin:APP:enhancedcelestials.mixins.json:MixinLivingEntity,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinLivingEntity,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.entity.MobEntity.func_70071_h_(MobEntity.java:300) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:runtimedistcleaner:A}
+	at com.github.alexthe666.iceandfire.entity.EntityDragonBase.func_70071_h_(EntityDragonBase.java:1688) ~[iceandfire:2.1.11-1.16.5] {re:classloading}
+	at net.minecraft.world.server.ServerWorld.func_217479_a(ServerWorld.java:611) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+-- Entity being ticked --
+Details:
+	Entity Type: iceandfire:fire_dragon (com.github.alexthe666.iceandfire.entity.EntityFireDragon)
+	Entity ID: 74631
+	Entity Name: Fire Dragon
+	Entity's Exact location: -139.97, 10.00, 908.62
+	Entity's Block location: World: (-140,10,908), Chunk: (at 4,0,12 in -9,56; contains blocks -144,0,896 to -129,255,911), Region: (-1,1; contains chunks -32,32 to -1,63, blocks -512,0,512 to -1,255,1023)
+	Entity's Momentum: -0.01, -0.08, -0.03
+	Entity's Passengers: []
+	Entity's Vehicle: ~~ERROR~~ NullPointerException: null
+Stacktrace:
+	at net.minecraft.world.World.func_217390_a(World.java:554) ~[?:?] {re:mixin,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,xf:fml:observerlib:coremodmethod,xf:fml:twilightforest:hitbox,pl:mixin:APP:kubejs-common.mixins.json:LevelMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinWorld,pl:mixin:APP:assets/astralsorcery/astralsorcery.mixins.json:MixinWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.world.server.ServerWorld.func_72835_b(ServerWorld.java:404) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:bountifulbaubles.mixins.json:MixinServerWorld,pl:mixin:APP:abnormals_core.mixins.json:ServerWorldMixin,pl:mixin:APP:enhancedcelestials.mixins.json:MixinServerWorld,pl:mixin:A,pl:runtimedistcleaner:A}
+
+
+-- Affected level --
+Details:
+	All players: 2 total; [ServerPlayerEntity['BlissFish'/59, l='ServerLevel[world]', x=154.08, y=76.16, z=757.70], ServerPlayerEntity['GDR1234'/332, l='ServerLevel[world]', x=-108.61, y=111.10, z=850.11]]
+	Chunk stats: ServerChunkCache: 4733
+	Level dimension: minecraft:overworld
+	Level spawn location: World: (224,67,144), Chunk: (at 0,4,0 in 14,9; contains blocks 224,0,144 to 239,255,159), Region: (0,0; contains chunks 0,0 to 31,31, blocks 0,0,0 to 511,255,511)
+	Level time: 281390 game time, 246000 day time
+	Level name: world
+	Level game mode: Game mode: survival (ID 0). Hardcore: false. Cheats: false
+	Level weather: Rain time: 1 (now: false), thunder time: 1 (now: false)
+	Known server brands: forge
+	Level was modded: true
+	Level storage version: 0x04ABD - Anvil
+Stacktrace:
+	at net.minecraft.server.MinecraftServer.func_71190_q(MinecraftServer.java:851) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.dedicated.DedicatedServer.func_71190_q(DedicatedServer.java:291) ~[?:?] {re:classloading,pl:accesstransformer:B}
+	at net.minecraft.server.MinecraftServer.func_71217_p(MinecraftServer.java:787) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240802_v_(MinecraftServer.java:642) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at net.minecraft.server.MinecraftServer.func_240783_a_(MinecraftServer.java:232) ~[?:?] {re:mixin,pl:accesstransformer:B,pl:runtimedistcleaner:A,re:classloading,pl:accesstransformer:B,pl:mixin:APP:betterendforge.mixins.json:MinecraftServerMixin,pl:mixin:APP:structure_gel.mixins.json:MinecraftServerMixin,pl:mixin:APP:kubejs-common.mixins.json:MinecraftServerMixin,pl:mixin:A,pl:runtimedistcleaner:A}
+	at java.lang.Thread.run(Thread.java:834) [?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.16.5
+	Minecraft Version ID: 1.16.5
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 11.0.12, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 6585395896 bytes (6280 MB) / 8589934592 bytes (8192 MB) up to 8589934592 bytes (8192 MB)
+	CPUs: 16
+	JVM Flags: 14 total; -Xmx8G -Xms8G -Xss4M -XX:+UseG1GC -XX:+UnlockExperimentalVMOptions -XX:G1NewSizePercent=20 -XX:G1ReservePercent=20 -XX:MaxGCPauseMillis=50 -XX:+AlwaysPreTouch -XX:+UseStringDeduplication -XX:-OmitStackTraceInFastThrow -XX:+OptimizeStringConcat -XX:+UseAdaptiveGCBoundary -XX:G1HeapRegionSize=32M
+	ModLauncher: 8.1.3+8.1.3+main-8.1.x.c94d18ec
+	ModLauncher launch target: fmlserver
+	ModLauncher naming: srg
+	ModLauncher services: 
+		/mixin-0.8.4.jar mixin PLUGINSERVICE 
+		/eventbus-4.0.0.jar eventbus PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar object_holder_definalize PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar runtime_enum_extender PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar capability_inject_definalize PLUGINSERVICE 
+		/accesstransformers-3.0.1.jar accesstransformer PLUGINSERVICE 
+		/forge-1.16.5-36.2.35.jar runtimedistcleaner PLUGINSERVICE 
+		/mixin-0.8.4.jar mixin TRANSFORMATIONSERVICE 
+		/forge-1.16.5-36.2.35.jar fml TRANSFORMATIONSERVICE 
+	FML: 36.2
+	Forge: net.minecraftforge:36.2.35
+	FML Language Providers: 
+		javafml@36.2
+		minecraft@1
+	Mod List: 
+		[天空村庄]SkyVillage_1.0.0_1.16.5.jar                 |Sky Villages                  |skyvillages                   |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		[地下城]DungeonsMod-1.16.3-1.4.43.jar                |Dungeons Mod                  |dungeonsmod                   |1.16.3-1.4.43       |DONE      |Manifest: NOSIGNATURE
+		[蔚蓝天空] blue_skies-1.16.5-1.1.3.jar                |Blue Skies                    |blue_skies                    |1.1.3               |DONE      |Manifest: NOSIGNATURE
+		[星辉魔法] astralsorcery-1.16.5-1.14.1.jar            |Astral Sorcery                |astralsorcery                 |1.16.4-1.14.1       |DONE      |Manifest: 45:2b:0a:49:6b:65:3b:39:a9:dd:d2:5b:55:7f:82:47:a5:1d:7a:cc:7f:a8:69:73:72:53:6f:57:4d:b2:1a:b7
+		[猛龙之居] Wyrmroost-1.16.3-1.2.11.jar                |Wyrmroost                     |wyrmroost                     |1.16.3-1.2.11       |DONE      |Manifest: NOSIGNATURE
+		[菲利普的遗迹]Philips ruins 1.16.5-2.8.jar              |Philips ruins1.16.5           |philips_ruins1_16_5           |2.8                 |DONE      |Manifest: NOSIGNATURE
+		[公开GUI显示]PGA-1.16.4-1.1.2.1.jar                   |Public GUI Announcement       |publicguiannouncement         |1.1.0.1             |DONE      |Manifest: NOSIGNATURE
+		[碰撞体积优化]entitycollisionfpsfix-1.16-1.0.1.jar      |Entity Collision FPS Fix      |entitycollisionfpsfix         |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		[Xaero的世界地图] XaerosWorldMap_1.26.0_Forge_1.16.5.ja|Xaero's World Map             |xaeroworldmap                 |1.26.0              |DONE      |Manifest: NOSIGNATURE
+		[凋零骷髅调整前置]Placebo-1.16.5-4.7.0.jar                |Placebo                       |placebo                       |4.7.0               |DONE      |Manifest: NOSIGNATURE
+		[冰与火之歌前置]citadel-1.8.1-1.16.5.jar                 |Citadel                       |citadel                       |1.8.1               |DONE      |Manifest: NOSIGNATURE
+		[Alex的生物] alexsmobs-1.12.1.jar                    |Alex's Mobs                   |alexsmobs                     |1.12.1              |DONE      |Manifest: NOSIGNATURE
+		[传说工具条提示前置]Prism-1.16.5-1.0.1.jar                 |Prism                         |prism                         |1.0.1               |DONE      |Manifest: NOSIGNATURE
+		[农夫乐事拓展]farmersdelightintegrations-1.16.5-1.2.jar |Farmer's Delight Compats      |farmersdelightintegrations    |1.16.5-1.2          |DONE      |Manifest: NOSIGNATURE
+		[头衔前置]YungsApi-1.16.4-Forge-13.jar                |YUNG's API                    |yungsapi                      |1.16.4-Forge-13     |DONE      |Manifest: NOSIGNATURE
+		[突变生物重置版] MutantBeasts-1.16.4-1.1.3.jar           |Mutant Beasts                 |mutantbeasts                  |1.16.4-1.1.3        |DONE      |Manifest: d9:be:bd:b6:9a:e4:14:aa:05:67:fb:84:06:77:a0:c5:10:ec:27:15:1b:d6:c0:88:49:9a:ef:26:77:61:0b:5e
+		[凋灵骷髅调整] WitherSkeletonTweaks-1.16.5-5.4.1.jar    |Wither Skeleton Tweaks        |wstweaks                      |5.4.1               |DONE      |Manifest: NOSIGNATURE
+		[警卫村民]guardvillagers-1.16.5.1.2.6.jar             |Guard Villagers               |guardvillagers                |1.2.6               |DONE      |Manifest: NOSIGNATURE
+		[精妙背包] sophisticatedbackpacks-1.16.5-3.15.13.560.j|Sophisticated Backpacks       |sophisticatedbackpacks        |1.16.5-3.15.13.560  |DONE      |Manifest: NOSIGNATURE
+		[沉浸式盔甲]immersive-armors-1.1.6-forge.jar           |Immersive Armors              |immersive_armors              |1.1.6               |DONE      |Manifest: NOSIGNATURE
+		[搬运] carryon-1.16.5-1.15.5.22.jar                 |Carry On                      |carryon                       |1.15.5.22           |DONE      |Manifest: NOSIGNATURE
+		[滑翔伞] Paraglider-1.16.5-1.3.2.11.jar              |Paraglider                    |paraglider                    |1.3.2.11            |DONE      |Manifest: NOSIGNATURE
+		[末影龙难度调整]dragonfight-1.8.jar                      |dragonfight mod               |dragonfight                   |1.8                 |DONE      |Manifest: NOSIGNATURE
+		[存储扩展前置]ninjaphenix-container-library-1.2.10+1.16.|NinjaPhenix's Container Librar|ninjaphenix_container_lib     |1.2.10              |DONE      |Manifest: NOSIGNATURE
+		[试验假人]MmmMmmMmmMmm-1.16.5-1.3.1.jar               |MmmMmmMmmMmm                  |dummmmmmy                     |1.3.0               |DONE      |Manifest: NOSIGNATURE
+		[暮色森林]twilightforest-1.16.5-4.0.490-universal.jar |The Twilight Forest           |twilightforest                |NONE                |DONE      |Manifest: NOSIGNATURE
+		[巴迪卡牌]Buddycards-1.16.5-2.5.3.jar                 |Buddycards                    |buddycards                    |1.16.5-2.5.3        |DONE      |Manifest: NOSIGNATURE
+		[更好的末地Forge重铸版] betterendforge-1.16.5-2.5.jar     |BetterEnd Forge               |betterendforge                |1.16.5-2.5          |DONE      |Manifest: NOSIGNATURE
+		[进度牌匾]AdvancementPlaques-1.16.5-1.4.1.jar         |Advancement Plaques           |advancementplaques            |1.4.1               |DONE      |Manifest: NOSIGNATURE
+		[前置]structure_gel-1.16.5-1.7.8.jar                |Structure Gel API             |structure_gel                 |1.7.8               |DONE      |Manifest: NOSIGNATURE
+		[昂贵突破]anviltweaks-3.1.jar                         |Anvil Tweaks                  |anviltweaks                   |3.1                 |DONE      |Manifest: NOSIGNATURE
+		[农夫乐事]FarmersDelight-1.16.5-0.6.0.jar             |Farmer's Delight              |farmersdelight                |1.16.5-0.6.0        |DONE      |Manifest: NOSIGNATURE
+		[火炬大师] torchmaster-2.3.8.jar                      |Torchmaster                   |torchmaster                   |2.3.8               |DONE      |Manifest: NOSIGNATURE
+		[结构变体] repurposed_structures_forge-3.4.7+1.16.5.ja|Repurposed Structures         |repurposed_structures         |3.4.7+1.16.5        |DONE      |Manifest: NOSIGNATURE
+		[末地 创世]endrem-5.0.2-R-1.16.5.jar                  |End Remastered                |endrem                        |5.0.2-R-1.16.5      |DONE      |Manifest: NOSIGNATURE
+		[更多熔炉]ironfurnaces-1.16.5-2.7.7.jar               |Iron Furnaces                 |ironfurnaces                  |2.7.7               |DONE      |Manifest: NOSIGNATURE
+		[火花] spark-1.9.1-forge.jar                        |spark                         |spark                         |1.9.1               |DONE      |Manifest: NOSIGNATURE
+		[饰品栏]curios-forge-1.16.5-4.0.8.2.jar              |Curios API                    |curios                        |1.16.5-4.0.8.2      |DONE      |Manifest: NOSIGNATURE
+		[遗物]relics-1.16.5-0.3.4.4.jar                     |Relics                        |relics                        |0.3.4.4             |DONE      |Manifest: NOSIGNATURE
+		[灾变] L_Enders Cataclysm-0.48-1.16.5.jar           |Cataclysm Mod                 |cataclysm                     |1.0                 |DONE      |Manifest: NOSIGNATURE
+		[国创][车万女仆]touhoulittlemaid-1.16.5-1.0.2.jar       |Touhou Little Maid            |touhou_little_maid            |NONE                |DONE      |Manifest: NOSIGNATURE
+		[帕秋莉手册]Patchouli-1.16.4-53.2.jar                  |Patchouli                     |patchouli                     |1.16.4-53.2         |DONE      |Manifest: NOSIGNATURE
+		[道具BAN]itemblacklist-1.16.5-1.4.2.jar             |Item Blacklist                |itemblacklist                 |1.16.5-1.4.2        |DONE      |Manifest: NOSIGNATURE
+		[货币多多]Never-Enough-Currency-1.16.5-1.0.5.jar      |Never Enough Currency         |currency                      |1.16.5-1.0.5        |DONE      |Manifest: NOSIGNATURE
+		[新生魔艺附属]arsomega-1.5.jar                          |Ars Omega                     |arsomega                      |1.16.5-1.5          |DONE      |Manifest: NOSIGNATURE
+		[初始套件前置]collective-1.16.5-4.25.jar                |Collective                    |collective                    |4.25                |DONE      |Manifest: NOSIGNATURE
+		[白门的奇异附魔：苦痛长河]lowingagony-1.16.5-1.0.6.jar        |MarbleGate's Exotic Enchantmen|flowingagony                  |1.16.5-1.0.6        |DONE      |Manifest: NOSIGNATURE
+		[独特的附魔]Unique Enchantments-1.16.5-2.3.0.jar       |Unique Enchantments           |uniquee                       |2.3.0               |DONE      |Manifest: NOSIGNATURE
+		[矿石挖掘] OreExcavation-1.8.157.jar                  |Ore Excavation                |oreexcavation                 |1.8.157             |DONE      |Manifest: e7:68:1c:0d:b9:7e:cf:f8:f3:40:9c:84:c5:39:d7:a4:59:78:b0:6b:c3:fd:b7:4f:69:18:a3:88:e3:76:8c:3f
+		[无限+经验修补] InfinityMending-1.16.3-0.1.0.jar        |InfinityMending               |infinitymending               |0.1.0               |DONE      |Manifest: NOSIGNATURE
+		[神秘遗物] EnigmaticLegacy-2.11.11.jar                |Enigmatic Legacy              |enigmaticlegacy               |2.11.11             |DONE      |Manifest: NOSIGNATURE
+		[扩展存储] expandedstorage-7.3.8+1.16.5.jar           |Expanded Storage              |expandedstorage               |7.3.8               |DONE      |Manifest: NOSIGNATURE
+		worldedit-mod-7.2.5-dist.jar                      |WorldEdit                     |worldedit                     |7.2.5+57d5ac9       |DONE      |Manifest: NOSIGNATURE
+		[深渊：第二章] TheAbyss2 2.2.3-4 1.16.5.jar             |TheAbyss                      |theabyss                      |2.2.3-4             |DONE      |Manifest: NOSIGNATURE
+		[初始套件]starterkit_1.16.5-3.1.jar                   |Starter Kit                   |starterkit                    |3.1                 |DONE      |Manifest: NOSIGNATURE
+		[斯巴达的武器] SpartanWeaponry-1.16.5-2.2.0-rc-2.jar    |Spartan Weaponry              |spartanweaponry               |2.2.0 Release Candid|DONE      |Manifest: NOSIGNATURE
+		[国创][暮色乐事]TwilightDelight-1.16.5-1.1.3.jar        |Twilight Delight              |twilightdelight               |1.1.3               |DONE      |Manifest: NOSIGNATURE
+		[更多突变生物] mutantmore-1.16.5-1.0.1.jar              |Mutant More                   |mutantmore                    |1.0.3               |DONE      |Manifest: NOSIGNATURE
+		[FTB前置]architectury-1.32.66.jar                   |Architectury                  |architectury                  |1.32.66             |DONE      |Manifest: NOSIGNATURE
+		[AI改进] AI-Improvements-1.16.5-0.4.0.jar           |AI-Improvements               |aiimprovements                |0.4.0               |DONE      |Manifest: NOSIGNATURE
+		[星辉魔法前置]observerlib-1.16.5-1.5.3.jar              |ObserverLib                   |observerlib                   |1.16.5-1.5.3        |DONE      |Manifest: NOSIGNATURE
+		[刷怪笼控制]AgeingSpawners-1.16.5-1.1.0.jar            |Ageing Spawners               |ageingspawners                |1.1.0               |DONE      |Manifest: NOSIGNATURE
+		[深暗之园] The_Undergarden-1.16.5-0.5.5.jar           |The Undergarden               |undergarden                   |0.5.5               |DONE      |Manifest: NOSIGNATURE
+		[附魔师]enchantwithmob-1.16.5-1.5.2.jar              |Enchant With Mob              |enchantwithmob                |1.16.5-1.5.2        |DONE      |Manifest: NOSIGNATURE
+		[汤姆的简易存储]toms_storage-1.2.19.jar                  |Tom's Simple Storage Mod      |toms_storage                  |1.2.19              |DONE      |Manifest: NOSIGNATURE
+		[区块载入器前置]CodeChickenLib-1.16.5-4.0.7.445-universal|CodeChicken Lib               |codechickenlib                |4.0.7.445           |DONE      |Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		[配置调整前置]BetterModsButton-v1.0.5-1.16.5-Forge.jar  |Better Mods Button            |bettermodsbutton              |1.0.5               |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[虚空图腾]voidtotem-1.16.5-1.4.0.jar                  |Void Totem                    |voidtotem                     |1.16.5-1.4.0        |DONE      |Manifest: NOSIGNATURE
+		[独特的附魔前置]Unique Enchantments Base-1.16.5-1.4.0.jar|Unique Enchantments Base      |uniquebase                    |1.4.0               |DONE      |Manifest: NOSIGNATURE
+		[悚怖钢] dreadsteel-1.16.5-1.1.4.1.jar               |Dreadsteel                    |dreadsteel                    |1.16.5-1.1.4.1      |DONE      |Manifest: NOSIGNATURE
+		[魔改前置]rhino-forge-1605.1.5-build.75.jar           |Rhino                         |rhino                         |1605.1.5-build.75   |DONE      |Manifest: NOSIGNATURE
+		[虚拟生物]mowziesmobs-1.5.25.jar                      |Mowzie's Mobs                 |mowziesmobs                   |1.5.25              |DONE      |Manifest: NOSIGNATURE
+		[前置]geckolib-forge-1.16.5-3.0.66.jar              |GeckoLib                      |geckolib3                     |3.0.66              |DONE      |Manifest: NOSIGNATURE
+		[吃不停] AlwaysEat-4.0.jar                           |AlwaysEat                     |salwayseat                    |4.0                 |DONE      |Manifest: NOSIGNATURE
+		[连锁破坏前置]ftb-library-forge-1605.3.4-build.90.jar   |FTB Library                   |ftblibrary                    |1605.3.4-build.90   |DONE      |Manifest: NOSIGNATURE
+		[FTBQ]团队ftb-teams-forge-1605.2.3-build.40.jar     |FTB Teams                     |ftbteams                      |1605.2.3-build.40   |DONE      |Manifest: NOSIGNATURE
+		[配置调整]ConfigMenusForge-v1.2.0-1.16.5-Forge.jar    |Config Menus for Forge        |configmenusforge              |1.2.0               |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[丰富的饰品] bountifulbaubles-1.16.5-0.1.0-forge.jar   |Bountiful Baubles             |bountifulbaubles              |1.16.5-0.1.0        |DONE      |Manifest: NOSIGNATURE
+		[JEI物品管理器] jei-1.16.5-7.7.1.153.jar               |Just Enough Items             |jei                           |7.7.1.153           |DONE      |Manifest: NOSIGNATURE
+		[魔改]kubejs-forge-1605.3.19-build.299.jar          |KubeJS                        |kubejs                        |1605.3.19-build.299 |DONE      |Manifest: NOSIGNATURE
+		[JEI附魔信息] JEIEnchantmentInfo-1.16.4-1.2.1.jar     |JEI Enchantment Info          |jeienchantmentinfo            |1.16.4-1.2.1        |DONE      |Manifest: NOSIGNATURE
+		[FTBQ]前置item-filters-forge-1605.2.5-build.7.jar   |Item Filters                  |itemfilters                   |1605.2.5-build.7    |DONE      |Manifest: NOSIGNATURE
+		[工作台优化]VisualWorkbench-v1.1.0-1.16.5.jar          |Visual Workbench              |visualworkbench               |1.1.0               |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[属性修复] AttributeFix-1.16.5-10.1.4.jar             |AttributeFix                  |attributefix                  |10.1.4              |DONE      |Manifest: eb:c4:b1:67:8b:f9:0c:db:dc:4f:01:b1:8e:61:64:39:4c:10:85:0b:a6:c4:c7:48:f0:fa:95:f2:cb:08:3a:e5
+		[魔术师] the-conjurer-1.16.4-1.0.13.jar              |The Conjurer                  |conjurer_illager              |1.0.13              |DONE      |Manifest: NOSIGNATURE
+		[下界乐事前置]abnormals_core-1.16.5-3.3.1.jar           |Abnormals Core                |abnormals_core                |3.3.1               |DONE      |Manifest: NOSIGNATURE
+		[哥布林商人] goblintraders-1.6.0-1.16.3.jar            |Goblin Traders                |goblintraders                 |1.6.0               |DONE      |Manifest: NOSIGNATURE
+		[可怕的地牢前置]LibraryFerret-Forge-1.16.5-1.0.3.jar     |Library ferret                |libraryferret                 |1.0.3               |DONE      |Manifest: NOSIGNATURE
+		[提升戒指]RingsOfAscension-1.16.4-1.6.0.jar           |Rings of Ascension            |ringsofascension              |1.6.0               |DONE      |Manifest: NOSIGNATURE
+		[传送石碑]Waystones_1.16.5-7.6.4.jar                  |Waystones                     |waystones                     |7.6.4               |DONE      |Manifest: NOSIGNATURE
+		[经验机制改革] Clumps-6.0.0.28.jar                      |Clumps                        |clumps                        |6.0.0.28            |DONE      |Manifest: NOSIGNATURE
+		[可怕的地牢]AwesomeDungeonForge-1.16.5-2.0.8.jar       |Awesome Dungeon               |awesomedungeon                |2.0.8               |DONE      |Manifest: NOSIGNATURE
+		[自然罗盘／生物群系指南针] NaturesCompass-1.16.5-2.0.1-fabric.|Nature's Compass              |naturescompass                |1.16.5-1.9.1-forge  |DONE      |Manifest: NOSIGNATURE
+		[冠军／强敌] champions-forge-1.16.5-2.0.1.12.jar       |Champions                     |champions                     |1.16.5-2.0.1.12     |DONE      |Manifest: NOSIGNATURE
+		[烹饪锅]CrockPot-1.16.5-2.1.0-release.jar            |Crock Pot                     |crockpot                      |2.1.0-release       |DONE      |Manifest: NOSIGNATURE
+		[探险者指南针] ExplorersCompass-1.16.5-1.1.2-forge.jar  |Explorer's Compass            |explorerscompass              |1.16.5-1.1.2-forge  |DONE      |Manifest: NOSIGNATURE
+		[冰与火之歌]iceandfire-2.1.11-1.16.5.jar               |Ice and Fire                  |iceandfire                    |2.1.11-1.16.5       |DONE      |Manifest: NOSIGNATURE
+		[寻龙之眼].jar                                        |Eye of Dragons                |eyeofdragons                  |NONE                |DONE      |Manifest: NOSIGNATURE
+		[任务拓展]questsadditions-1.16-1.4.0.jar              |Quests Additions              |questsadditions               |1.4.0               |DONE      |Manifest: NOSIGNATURE
+		[遍历]traverse-1.16.4-0.4.3.8.jar                   |Traverse: Reforged            |traverse                      |1.16.4-0.4.3.8      |DONE      |Manifest: NOSIGNATURE
+		[新生魔艺] ars_nouveau-1.16.5-1.25.1.jar              |Ars Nouveau                   |ars_nouveau                   |1.25.1              |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.35-universal.jar                |Forge                         |forge                         |36.2.35             |DONE      |Manifest: 22:af:21:d8:19:82:7f:93:94:fe:2b:ac:b7:e4:41:57:68:39:87:b1:a7:5c:c6:44:f9:25:74:21:14:f5:0d:90
+		[阿图姆：沙漠之旅／亚图姆：金沙之旅] Atum-1.16.5-2.2.11.jar        |Atum 2                        |atum                          |1.16.5-2.2.11       |DONE      |Manifest: NOSIGNATURE
+		[多元乐事]culturaldelights-1.16.5-0.9.2.jar           |Cultural Delights             |culturaldelights              |0.9.2               |DONE      |Manifest: NOSIGNATURE
+		[农夫的拓展食物] Farmers_Extra_Foods_1.2.jar             |Farmer's Extra Foods          |farmers_extra_foods           |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		[旅行者的头衔]TravelersTitles-1.16.4-1.5.jar            |Traveler's Titles             |travelerstitles               |1.16.4-1.5          |DONE      |Manifest: NOSIGNATURE
+		[斯巴达的武器：暮色森林] spartantwilight-1.16.5-2.2.1.jar    |Spartan Weaponry: Twilight For|spartantwilight               |1.16.5-2.2.1        |DONE      |Manifest: NOSIGNATURE
+		[副手战斗] OffHandCombat-1.16.3-3.2.1.3.jar           |Off Hand Combat               |offhandcombat                 |1.16.3-3.2.1.3      |DONE      |Manifest: c9:84:cd:eb:27:ac:0d:ad:8c:55:6f:d6:5f:19:f2:c8:63:2a:b0:bd:3b:d0:b6:df:fd:9f:de:9f:9d:e8:7c:68
+		[Fish的不死族崛起]Fish's Undead Rising-2.1.0.jar        |Fish's Undead Rising          |mod_lavacow                   |2.1.0               |DONE      |Manifest: NOSIGNATURE
+		[沉浸式音效]ImmersiveFX+1.0.2+1.16.5.jar               |§3ImmersiveFX                 |dsurround                     |4.0.5.0             |DONE      |Manifest: NOSIGNATURE
+		[原版扩充前置]selene-1.16.5-1.9.0.jar                   |Selene                        |selene                        |1.16.5-1.0          |DONE      |Manifest: NOSIGNATURE
+		[地牢浮现之时]DungeonsArise-1.16.5-2.1.49-beta.jar      |When Dungeons Arise           |dungeons_arise                |2.1.49              |DONE      |Manifest: NOSIGNATURE
+		forge-1.16.5-36.2.35-server.jar                   |Minecraft                     |minecraft                     |1.16.5              |DONE      |Manifest: NOSIGNATURE
+		[右键收取农作物]right_click_get_crops-1.16.5-1.1.0.2.jar |Right Click, Get Crops        |right_click_get_crops         |1.1.0.2             |DONE      |Manifest: 75:0b:cc:9b:64:2e:9b:c4:41:d1:95:00:71:ee:87:1a:b3:5e:4b:da:8e:e8:39:00:fd:5d:e5:9c:40:42:33:09
+		[罪恶之子]sons-of-sins-1.16.5-1.0.9.jar               |sons of sins                  |sons_of_sins                  |1.0.9               |DONE      |Manifest: NOSIGNATURE
+		[战斗高塔]BrassAmberBattleTowers-1.16.5-1.6.3.jar     |Brass Amber BattleTowers      |ba_bt                         |1.16.5-1.6.3        |DONE      |Manifest: NOSIGNATURE
+		[治疗调整]roughtweaks-1.16.5-2.5.0.jar                |Rough Tweaks                  |roughtweaks                   |2.5.0               |DONE      |Manifest: NOSIGNATURE
+		[工具皮带] ToolBelt-1.16.5-1.16.3.jar                 |Tool Belt                     |toolbelt                      |1.16.3              |DONE      |Manifest: NOSIGNATURE
+		[FTBQ]FTB任务ftb-quests-forge-1605.3.6-build.76.jar |FTB Quests                    |ftbquests                     |1605.3.6-build.76   |DONE      |Manifest: NOSIGNATURE
+		[任务牌匾] QuestPlaques-1.16.5-1.0.2.jar              |Quest Plaques                 |questplaques                  |1.0.2               |DONE      |Manifest: NOSIGNATURE
+		[玉 ] Jade-1.16.4-2.8.1.jar                        |Jade                          |jade                          |2.8.1               |DONE      |Manifest: NOSIGNATURE
+		[越肩视角重制] ShoulderSurfing-1.16.5-2.2.2.jar         |Shoulder Surfing              |shouldersurfing               |1.16.5-2.2.2        |DONE      |Manifest: NOSIGNATURE
+		[重铸] modifiers-0.1.2-forge.jar                    |Modifiers                     |modifiers                     |0.1.2               |DONE      |Manifest: NOSIGNATURE
+		[国创][旷野之塔：重置] towers_of_the_wild-1.16.3-2.1.0.1.ja|Towers Of The Wild            |towers_of_the_wild            |1.16.3-2.1.0        |DONE      |Manifest: NOSIGNATURE
+		[区块载入器] ChickenChunks-1.16.5-2.9.1.89-universal.ja|ChickenChunks                 |chickenchunks                 |2.9.1.89            |DONE      |Manifest: 31:e6:db:63:47:4a:6e:e0:0a:2c:11:d1:76:db:4e:82:ff:56:2d:29:93:d2:e5:02:bd:d3:bd:9d:27:47:a5:71
+		[任务牌匾前置] Iceberg-1.16.5-1.0.45.jar                |Iceberg                       |iceberg                       |1.0.45              |DONE      |Manifest: NOSIGNATURE
+		[传说工具提示]LegendaryTooltips-1.16.5-1.1.7.jar        |Legendary Tooltips            |legendarytooltips             |1.1.7               |DONE      |Manifest: NOSIGNATURE
+		[Xaero的小地图] Xaeros_Minimap_22.12.0_Forge_1.16.5.ja|Xaero's Minimap               |xaerominimap                  |22.12.0             |DONE      |Manifest: NOSIGNATURE
+		[FTB备份]ftb-backups-2.1.2.2.jar                    |FTB Backups                   |ftbbackups                    |2.1.2.2             |DONE      |Manifest: NOSIGNATURE
+		[寻龙杖]dragonseeker-1.1.jar                         |Dragonseeker                  |dragonseeker                  |1.1                 |DONE      |Manifest: NOSIGNATURE
+		[多态合成]polymorph-forge-1.16.5-0.40.jar             |Polymorph                     |polymorph                     |1.16.5-0.40         |DONE      |Manifest: NOSIGNATURE
+		[储物抽屉] StorageDrawers-1.16.3-8.5.2.jar            |Storage Drawers               |storagedrawers                |8.5.2               |DONE      |Manifest: NOSIGNATURE
+		[简单的茶] simplytea-1.16.5-2.4.0.jar                 |Simply Tea                    |simplytea                     |2.4.0               |DONE      |Manifest: NOSIGNATURE
+		[殖民地前置] structurize-1.16.5-1.0.392-RELEASE.jar    |Structurize                   |structurize                   |1.16.5-1.0.392-RELEA|DONE      |Manifest: NOSIGNATURE
+		[斯巴达冰与火]SW+Ice+and+Fire-1.16.5-1.1.0.jar          |Spartan Weaponry: Ice and Fire|swiaf                         |1.16.5-1.1.0        |DONE      |Manifest: NOSIGNATURE
+		[模拟殖民地] minecolonies-1.16.5-1.0.890-RELEASE.jar   |MineColonies                  |minecolonies                  |1.16.5-1.0.890-RELEA|DONE      |Manifest: NOSIGNATURE
+		[下界乐事] nethers_delight-2.1.jar                    |Nethers Delight               |nethers_delight               |2.1                 |DONE      |Manifest: NOSIGNATURE
+		[生活调味料：胡萝卜版] SoL-Carrot-1.16.5-1.10.1.jar         |Spice of Life: Carrot Edition |solcarrot                     |1.16.5-1.10.1       |DONE      |Manifest: NOSIGNATURE
+		[月亮事件]enhancedcelestials-2.0.9-1.16.5.jar         |Enhanced Celestials           |enhancedcelestials            |2.0.9-1.16.5        |DONE      |Manifest: NOSIGNATURE
+		[工作台优化前置]PuzzlesLib-v1.0.15-1.16.5-Forge.jar      |Puzzles Lib                   |puzzleslib                    |1.0.15              |DONE      |Manifest: 9a:09:85:98:65:c4:8c:11:c5:49:f6:d6:33:23:39:df:8d:b4:ff:92:84:b8:bd:a5:83:9f:ac:7f:2a:d1:4b:6a
+		[水产养殖2] Aquaculture-1.16.5-2.1.22.jar             |Aquaculture 2                 |aquaculture                   |1.16.5-2.1.22       |DONE      |Manifest: NOSIGNATURE
+		[农夫的茶] farmerstea-1.16.5-1.3.jar                  |Farmer's Tea - A Compat Mod   |farmerstea                    |1.16.5-1.3          |DONE      |Manifest: NOSIGNATURE
+		[更强更远]HarderFarther-1.16.5-1.36.0.6.jar           |Harder Farther Mod            |harderfarther                 |1.36.0.6            |DONE      |Manifest: NOSIGNATURE
+		[时装盔甲重制版]CosmeticArmorReworked-1.16.5-v5.jar      |CosmeticArmorReworked         |cosmeticarmorreworked         |1.16.5-v5           |DONE      |Manifest: 5e:ed:25:99:e4:44:14:c0:dd:89:c1:a9:4c:10:b5:0d:e4:b1:52:50:45:82:13:d8:d0:32:89:67:56:57:01:53
+		[清除掉落物]item kill-1.16.5-1.0.0.jar                 |itme kill                     |itme_kill                     |1.0.0               |DONE      |Manifest: NOSIGNATURE
+		[国创][喝啤酒啦] drinkbeer-1.16.5-2.3.5.jar             |Drink Beer                    |drinkbeer                     |2.3.5               |DONE      |Manifest: NOSIGNATURE
+		[经验书]xptome-1.16.5-v2.1.5.jar                     |XP Tome                       |xpbook                        |v2.1.5              |DONE      |Manifest: NOSIGNATURE
+	Crash Report UUID: 3427106e-3082-4529-af9d-cde3e4dcbc53
+	Player Count: 2 / 20; [ServerPlayerEntity['BlissFish'/59, l='ServerLevel[world]', x=154.08, y=76.16, z=757.70], ServerPlayerEntity['GDR1234'/332, l='ServerLevel[world]', x=-108.61, y=111.10, z=850.11]]
+	Data Packs: vanilla, mod:skyvillages, mod:dungeonsmod (incompatible), mod:blue_skies (incompatible), mod:astralsorcery, mod:wyrmroost (incompatible), mod:philips_ruins1_16_5, mod:publicguiannouncement (incompatible), mod:entitycollisionfpsfix (incompatible), mod:xaeroworldmap, mod:placebo (incompatible), mod:citadel (incompatible), mod:alexsmobs, mod:prism (incompatible), mod:farmersdelightintegrations, mod:yungsapi, mod:mutantbeasts (incompatible), mod:wstweaks (incompatible), mod:guardvillagers, mod:sophisticatedbackpacks, mod:immersive_armors, mod:carryon, mod:paraglider, mod:dragonfight, mod:ninjaphenix_container_lib (incompatible), mod:dummmmmmy (incompatible), mod:twilightforest, mod:buddycards, mod:betterendforge, mod:advancementplaques, mod:structure_gel, mod:anviltweaks (incompatible), mod:farmersdelight, mod:torchmaster (incompatible), mod:repurposed_structures, mod:endrem (incompatible), mod:ironfurnaces, mod:spark, mod:curios, mod:relics, mod:cataclysm (incompatible), mod:touhou_little_maid, mod:patchouli (incompatible), mod:itemblacklist, mod:currency (incompatible), mod:arsomega, mod:collective, mod:flowingagony, mod:uniquee (incompatible), mod:oreexcavation, mod:infinitymending (incompatible), mod:enigmaticlegacy, mod:expandedstorage (incompatible), mod:worldedit (incompatible), mod:theabyss, mod:starterkit, mod:spartanweaponry, mod:twilightdelight, mod:mutantmore, mod:architectury, mod:aiimprovements, mod:observerlib, mod:ageingspawners, mod:undergarden, mod:enchantwithmob, mod:toms_storage (incompatible), mod:codechickenlib (incompatible), mod:bettermodsbutton, mod:voidtotem, mod:uniquebase (incompatible), mod:dreadsteel, mod:rhino, mod:mowziesmobs, mod:geckolib3 (incompatible), mod:salwayseat (incompatible), mod:ftblibrary, mod:ftbteams, mod:configmenusforge, mod:bountifulbaubles (incompatible), mod:jei, mod:kubejs, mod:jeienchantmentinfo, mod:itemfilters, mod:visualworkbench, mod:attributefix, mod:conjurer_illager (incompatible), mod:abnormals_core, mod:goblintraders, mod:libraryferret, mod:ringsofascension (incompatible), mod:waystones (incompatible), mod:clumps, mod:awesomedungeon, mod:naturescompass (incompatible), mod:champions (incompatible), mod:crockpot, mod:explorerscompass, mod:iceandfire, mod:eyeofdragons, mod:questsadditions, mod:traverse (incompatible), mod:ars_nouveau, mod:forge, mod:atum, mod:culturaldelights, mod:farmers_extra_foods, mod:travelerstitles, mod:spartantwilight, mod:offhandcombat (incompatible), mod:mod_lavacow, mod:dsurround, mod:selene, mod:dungeons_arise, mod:right_click_get_crops (incompatible), mod:sons_of_sins, mod:ba_bt, mod:roughtweaks, mod:toolbelt (incompatible), mod:ftbquests, mod:questplaques (incompatible), mod:jade, mod:shouldersurfing, mod:modifiers, mod:towers_of_the_wild, mod:chickenchunks (incompatible), mod:iceberg, mod:legendarytooltips, mod:xaerominimap, mod:ftbbackups (incompatible), mod:dragonseeker, mod:polymorph, mod:storagedrawers (incompatible), mod:simplytea (incompatible), mod:structurize, mod:swiaf, mod:minecolonies (incompatible), mod:nethers_delight, mod:solcarrot, mod:enhancedcelestials, mod:puzzleslib, mod:aquaculture (incompatible), mod:farmerstea, mod:harderfarther, mod:cosmeticarmorreworked (incompatible), mod:itme_kill, mod:drinkbeer, mod:xpbook
+	Is Modded: Definitely; Server brand changed to 'forge'
+	Type: Dedicated Server (map_server.txt)
